@@ -10,7 +10,7 @@ namespace MeetYourBoss.Controllers
     {
         public ActionResult Index()
         {
-            return RedirectToAction("Index", "Posts");
+            return RedirectToAction("Index", "Posts"); 
         }
 
         public ActionResult About()
