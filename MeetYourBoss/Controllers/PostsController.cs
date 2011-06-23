@@ -14,7 +14,7 @@ namespace MeetYourBoss.Controllers
         private MeetYourBossEntities db = new MeetYourBossEntities();
 
         //
-        // GET: /Posts/
+        // GET: /Posts/ 
 
         public ViewResult Index()
         {
