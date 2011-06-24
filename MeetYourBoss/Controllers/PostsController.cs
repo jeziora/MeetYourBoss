@@ -30,7 +30,7 @@ namespace MeetYourBoss.Controllers
             return View(posts.ToList());
         }
 
-        public ActionResult FindCompany(int id )
+        public ActionResult FindCompany(int id ) ///lalaalaala
         {
             return RedirectToAction("Details","Companies",new {id=id});
         }
