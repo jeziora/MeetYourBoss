@@ -1,0 +1,45 @@
+﻿@model MeetYourBoss.Models.Post
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Posts</legend>
+
+    <div class="display-label">Companies</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Company.name)
+    </div>
+
+    <div class="display-label">aspnet_Users</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.aspnet_Users.UserName)
+    </div>
+
+    <div class="display-label">descryption</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.descryption)
+    </div>
+
+    <div class="display-label">title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">date_creation</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_creation)
+    </div>
+
+    <div class="display-label">date_last_view</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date_last_view)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

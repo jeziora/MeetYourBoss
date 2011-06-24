@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MeetYourBoss.Models.PostsView>
+
+@{
+    ViewBag.Title = "Strona główna";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Message</h2>
+
+@foreach (var item in Model) {
+
+    string date_only = item.date_creation.ToShortDateString();
+    double rating = (item.boss_rating + item.atmosphere_rating + item.salary_rating + item.social_rating) / 4;
+    
+    <div class="post">
+        <h2>@item.UserName o firmie: @Html.ActionLink(@item.name, "FindCompany", new { id = item.companies_id }) </h2>
+     
+		<h2 class="title"> @item.title (@rating) </h2>
+		<p class="date">   @date_only</p>
+            <div class="entry">
+		    <p>@Html.DisplayFor(modelItem => item.descryption)</p>
+            <p> @Html.ActionLink("Więcej", "Details",new {id=item.id})</p>
+	        </div>
+
+	</div>
+}
+
+<p>
+    @Html.ActionLink("Dodaj", "Create", "Posts")
+</p>
