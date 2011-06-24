@@ -1,0 +1,1892 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MeetYourBossModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MeetYourBossModelStoreContainer">
+          <EntitySet Name="aspnet_Applications" EntityType="MeetYourBossModel.Store.aspnet_Applications" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Membership" EntityType="MeetYourBossModel.Store.aspnet_Membership" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Paths" EntityType="MeetYourBossModel.Store.aspnet_Paths" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="MeetYourBossModel.Store.aspnet_PersonalizationAllUsers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="MeetYourBossModel.Store.aspnet_PersonalizationPerUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Profile" EntityType="MeetYourBossModel.Store.aspnet_Profile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Roles" EntityType="MeetYourBossModel.Store.aspnet_Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_SchemaVersions" EntityType="MeetYourBossModel.Store.aspnet_SchemaVersions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Users" EntityType="MeetYourBossModel.Store.aspnet_Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_UsersInRoles" EntityType="MeetYourBossModel.Store.aspnet_UsersInRoles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_WebEvent_Events" EntityType="MeetYourBossModel.Store.aspnet_WebEvent_Events" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Companies" EntityType="MeetYourBossModel.Store.Companies" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CompanyRating" EntityType="MeetYourBossModel.Store.CompanyRating" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CompanySize" EntityType="MeetYourBossModel.Store.CompanySize" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Posts" EntityType="MeetYourBossModel.Store.Posts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="MeetYourBossModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsersDetails" EntityType="MeetYourBossModel.Store.UsersDetails" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Version" EntityType="MeetYourBossModel.Store.Version" store:Type="Tables" store:Schema="dbo" store:Name="Version">
+            <DefiningQuery>SELECT 
+      [Version].[version_number] AS [version_number], 
+      [Version].[subversion_number] AS [subversion_number]
+      FROM [dbo].[Version] AS [Version]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CompaniesView" EntityType="MeetYourBossModel.Store.CompaniesView" store:Type="Views" store:Schema="dbo" store:Name="CompaniesView">
+            <DefiningQuery>SELECT 
+      [CompaniesView].[id] AS [id], 
+      [CompaniesView].[name] AS [name], 
+      [CompaniesView].[boss_rating_avg] AS [boss_rating_avg], 
+      [CompaniesView].[salary_rating_avg] AS [salary_rating_avg], 
+      [CompaniesView].[social_rating_avg] AS [social_rating_avg], 
+      [CompaniesView].[atmosphere_rating_avg] AS [atmosphere_rating_avg], 
+      [CompaniesView].[descryption] AS [descryption]
+      FROM [dbo].[CompaniesView] AS [CompaniesView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PostsView" EntityType="MeetYourBossModel.Store.PostsView" store:Type="Views" store:Schema="dbo" store:Name="PostsView">
+            <DefiningQuery>SELECT 
+      [PostsView].[id] AS [id], 
+      [PostsView].[companies_id] AS [companies_id], 
+      [PostsView].[users_id] AS [users_id], 
+      [PostsView].[descryption] AS [descryption], 
+      [PostsView].[title] AS [title], 
+      [PostsView].[date_creation] AS [date_creation], 
+      [PostsView].[date_last_view] AS [date_last_view], 
+      [PostsView].[boss_rating] AS [boss_rating], 
+      [PostsView].[atmosphere_rating] AS [atmosphere_rating], 
+      [PostsView].[social_rating] AS [social_rating], 
+      [PostsView].[salary_rating] AS [salary_rating], 
+      [PostsView].[UserName] AS [UserName], 
+      [PostsView].[LastActivityDate] AS [LastActivityDate], 
+      [PostsView].[mail] AS [mail], 
+      [PostsView].[number_of_posts] AS [number_of_posts], 
+      [PostsView].[name] AS [name], 
+      [PostsView].[first_name] AS [first_name], 
+      [PostsView].[last_name] AS [last_name], 
+      [PostsView].[image_url] AS [image_url]
+      FROM [dbo].[PostsView] AS [PostsView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_aspnet_Applications" EntityType="MeetYourBossModel.Store.vw_aspnet_Applications" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_Applications">
+            <DefiningQuery>SELECT 
+      [vw_aspnet_Applications].[ApplicationName] AS [ApplicationName], 
+      [vw_aspnet_Applications].[LoweredApplicationName] AS [LoweredApplicationName], 
+      [vw_aspnet_Applications].[ApplicationId] AS [ApplicationId], 
+      [vw_aspnet_Applications].[Description] AS [Description]
+      FROM [dbo].[vw_aspnet_Applications] AS [vw_aspnet_Applications]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_aspnet_MembershipUsers" EntityType="MeetYourBossModel.Store.vw_aspnet_MembershipUsers" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_MembershipUsers">
+            <DefiningQuery>SELECT 
+      [vw_aspnet_MembershipUsers].[UserId] AS [UserId], 
+      [vw_aspnet_MembershipUsers].[PasswordFormat] AS [PasswordFormat], 
+      [vw_aspnet_MembershipUsers].[MobilePIN] AS [MobilePIN], 
+      [vw_aspnet_MembershipUsers].[Email] AS [Email], 
+      [vw_aspnet_MembershipUsers].[LoweredEmail] AS [LoweredEmail], 
+      [vw_aspnet_MembershipUsers].[PasswordQuestion] AS [PasswordQuestion], 
+      [vw_aspnet_MembershipUsers].[PasswordAnswer] AS [PasswordAnswer], 
+      [vw_aspnet_MembershipUsers].[IsApproved] AS [IsApproved], 
+      [vw_aspnet_MembershipUsers].[IsLockedOut] AS [IsLockedOut], 
+      [vw_aspnet_MembershipUsers].[CreateDate] AS [CreateDate], 
+      [vw_aspnet_MembershipUsers].[LastLoginDate] AS [LastLoginDate], 
+      [vw_aspnet_MembershipUsers].[LastPasswordChangedDate] AS [LastPasswordChangedDate], 
+      [vw_aspnet_MembershipUsers].[LastLockoutDate] AS [LastLockoutDate], 
+      [vw_aspnet_MembershipUsers].[FailedPasswordAttemptCount] AS [FailedPasswordAttemptCount], 
+      [vw_aspnet_MembershipUsers].[FailedPasswordAttemptWindowStart] AS [FailedPasswordAttemptWindowStart], 
+      [vw_aspnet_MembershipUsers].[FailedPasswordAnswerAttemptCount] AS [FailedPasswordAnswerAttemptCount], 
+      [vw_aspnet_MembershipUsers].[FailedPasswordAnswerAttemptWindowStart] AS [FailedPasswordAnswerAttemptWindowStart], 
+      [vw_aspnet_MembershipUsers].[Comment] AS [Comment], 
+      [vw_aspnet_MembershipUsers].[ApplicationId] AS [ApplicationId], 
+      [vw_aspnet_MembershipUsers].[UserName] AS [UserName], 
+      [vw_aspnet_MembershipUsers].[MobileAlias] AS [MobileAlias], 
+      [vw_aspnet_MembershipUsers].[IsAnonymous] AS [IsAnonymous], 
+      [vw_aspnet_MembershipUsers].[LastActivityDate] AS [LastActivityDate]
+      FROM [dbo].[vw_aspnet_MembershipUsers] AS [vw_aspnet_MembershipUsers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_aspnet_Profiles" EntityType="MeetYourBossModel.Store.vw_aspnet_Profiles" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_Profiles">
+            <DefiningQuery>SELECT 
+      [vw_aspnet_Profiles].[UserId] AS [UserId], 
+      [vw_aspnet_Profiles].[LastUpdatedDate] AS [LastUpdatedDate], 
+      [vw_aspnet_Profiles].[DataSize] AS [DataSize]
+      FROM [dbo].[vw_aspnet_Profiles] AS [vw_aspnet_Profiles]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_aspnet_Roles" EntityType="MeetYourBossModel.Store.vw_aspnet_Roles" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_Roles">
+            <DefiningQuery>SELECT 
+      [vw_aspnet_Roles].[ApplicationId] AS [ApplicationId], 
+      [vw_aspnet_Roles].[RoleId] AS [RoleId], 
+      [vw_aspnet_Roles].[RoleName] AS [RoleName], 
+      [vw_aspnet_Roles].[LoweredRoleName] AS [LoweredRoleName], 
+      [vw_aspnet_Roles].[Description] AS [Description]
+      FROM [dbo].[vw_aspnet_Roles] AS [vw_aspnet_Roles]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_aspnet_Users" EntityType="MeetYourBossModel.Store.vw_aspnet_Users" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_Users">
+            <DefiningQuery>SELECT 
+      [vw_aspnet_Users].[ApplicationId] AS [ApplicationId], 
+      [vw_aspnet_Users].[UserId] AS [UserId], 
+      [vw_aspnet_Users].[UserName] AS [UserName], 
+      [vw_aspnet_Users].[LoweredUserName] AS [LoweredUserName], 
+      [vw_aspnet_Users].[MobileAlias] AS [MobileAlias], 
+      [vw_aspnet_Users].[IsAnonymous] AS [IsAnonymous], 
+      [vw_aspnet_Users].[LastActivityDate] AS [LastActivityDate]
+      FROM [dbo].[vw_aspnet_Users] AS [vw_aspnet_Users]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_aspnet_UsersInRoles" EntityType="MeetYourBossModel.Store.vw_aspnet_UsersInRoles" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_UsersInRoles">
+            <DefiningQuery>SELECT 
+      [vw_aspnet_UsersInRoles].[UserId] AS [UserId], 
+      [vw_aspnet_UsersInRoles].[RoleId] AS [RoleId]
+      FROM [dbo].[vw_aspnet_UsersInRoles] AS [vw_aspnet_UsersInRoles]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_aspnet_WebPartState_Paths" EntityType="MeetYourBossModel.Store.vw_aspnet_WebPartState_Paths" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_WebPartState_Paths">
+            <DefiningQuery>SELECT 
+      [vw_aspnet_WebPartState_Paths].[ApplicationId] AS [ApplicationId], 
+      [vw_aspnet_WebPartState_Paths].[PathId] AS [PathId], 
+      [vw_aspnet_WebPartState_Paths].[Path] AS [Path], 
+      [vw_aspnet_WebPartState_Paths].[LoweredPath] AS [LoweredPath]
+      FROM [dbo].[vw_aspnet_WebPartState_Paths] AS [vw_aspnet_WebPartState_Paths]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_aspnet_WebPartState_Shared" EntityType="MeetYourBossModel.Store.vw_aspnet_WebPartState_Shared" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_WebPartState_Shared">
+            <DefiningQuery>SELECT 
+      [vw_aspnet_WebPartState_Shared].[PathId] AS [PathId], 
+      [vw_aspnet_WebPartState_Shared].[DataSize] AS [DataSize], 
+      [vw_aspnet_WebPartState_Shared].[LastUpdatedDate] AS [LastUpdatedDate]
+      FROM [dbo].[vw_aspnet_WebPartState_Shared] AS [vw_aspnet_WebPartState_Shared]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_aspnet_WebPartState_User" EntityType="MeetYourBossModel.Store.vw_aspnet_WebPartState_User" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_WebPartState_User">
+            <DefiningQuery>SELECT 
+      [vw_aspnet_WebPartState_User].[PathId] AS [PathId], 
+      [vw_aspnet_WebPartState_User].[UserId] AS [UserId], 
+      [vw_aspnet_WebPartState_User].[DataSize] AS [DataSize], 
+      [vw_aspnet_WebPartState_User].[LastUpdatedDate] AS [LastUpdatedDate]
+      FROM [dbo].[vw_aspnet_WebPartState_User] AS [vw_aspnet_WebPartState_User]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__aspnet_Me__Appli__60A75C0F" Association="MeetYourBossModel.Store.FK__aspnet_Me__Appli__60A75C0F">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Me__UserI__619B8048" Association="MeetYourBossModel.Store.FK__aspnet_Me__UserI__619B8048">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pa__Appli__19DFD96B" Association="MeetYourBossModel.Store.FK__aspnet_Pa__Appli__19DFD96B">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__2180FB33" Association="MeetYourBossModel.Store.FK__aspnet_Pe__PathI__2180FB33">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__2739D489" Association="MeetYourBossModel.Store.FK__aspnet_Pe__PathI__2739D489">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__UserI__282DF8C2" Association="MeetYourBossModel.Store.FK__aspnet_Pe__UserI__282DF8C2">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pr__UserI__778AC167" Association="MeetYourBossModel.Store.FK__aspnet_Pr__UserI__778AC167">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Ro__Appli__02FC7413" Association="MeetYourBossModel.Store.FK__aspnet_Ro__Appli__02FC7413">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__Appli__4CA06362" Association="MeetYourBossModel.Store.FK__aspnet_Us__Appli__4CA06362">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__RoleI__09A971A2" Association="MeetYourBossModel.Store.FK__aspnet_Us__RoleI__09A971A2">
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+            <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__UserI__08B54D69" Association="MeetYourBossModel.Store.FK__aspnet_Us__UserI__08B54D69">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Companies_CompanySize" Association="MeetYourBossModel.Store.FK_Companies_CompanySize">
+            <End Role="CompanySize" EntitySet="CompanySize" />
+            <End Role="Companies" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyRating_Companies" Association="MeetYourBossModel.Store.FK_CompanyRating_Companies">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="CompanyRating" EntitySet="CompanyRating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Posts_aspnet_Users" Association="MeetYourBossModel.Store.FK_Posts_aspnet_Users">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="Posts" EntitySet="Posts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Posts_Companies" Association="MeetYourBossModel.Store.FK_Posts_Companies">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="Posts" EntitySet="Posts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersDetails_aspnetUsers" Association="MeetYourBossModel.Store.FK_UsersDetails_aspnetUsers">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="UsersDetails" EntitySet="UsersDetails" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="aspnet_Applications">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="ApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="aspnet_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordFormat" Type="int" Nullable="false" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+          <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+          <Property Name="IsApproved" Type="bit" Nullable="false" />
+          <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+          <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+          <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+          <Property Name="Comment" Type="ntext" />
+        </EntityType>
+        <EntityType Name="aspnet_Paths">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredPath" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationAllUsers">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PageSettings" Type="image" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationPerUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PathId" Type="uniqueidentifier" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="PageSettings" Type="image" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Profile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PropertyNames" Type="ntext" Nullable="false" />
+          <Property Name="PropertyValuesString" Type="ntext" Nullable="false" />
+          <Property Name="PropertyValuesBinary" Type="image" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredRoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="aspnet_SchemaVersions">
+          <Key>
+            <PropertyRef Name="Feature" />
+            <PropertyRef Name="CompatibleSchemaVersion" />
+          </Key>
+          <Property Name="Feature" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="CompatibleSchemaVersion" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="IsCurrentVersion" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredUserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+          <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+          <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+          <Property Name="mail" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="number_of_posts" Type="int" Nullable="false" />
+          <Property Name="number_of_entrances" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_UsersInRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_WebEvent_Events">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="char" Nullable="false" MaxLength="32" />
+          <Property Name="EventTimeUtc" Type="datetime" Nullable="false" />
+          <Property Name="EventTime" Type="datetime" Nullable="false" />
+          <Property Name="EventType" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="EventSequence" Type="decimal" Nullable="false" Precision="19" />
+          <Property Name="EventOccurrence" Type="decimal" Nullable="false" Precision="19" />
+          <Property Name="EventCode" Type="int" Nullable="false" />
+          <Property Name="EventDetailCode" Type="int" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ApplicationPath" Type="nvarchar" MaxLength="256" />
+          <Property Name="ApplicationVirtualPath" Type="nvarchar" MaxLength="256" />
+          <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="RequestUrl" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ExceptionType" Type="nvarchar" MaxLength="256" />
+          <Property Name="Details" Type="ntext" />
+        </EntityType>
+        <EntityType Name="Companies">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="companysize_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyRating">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="boss_rating_avg" Type="float" Nullable="false" />
+          <Property Name="salary_rating_avg" Type="float" Nullable="false" />
+          <Property Name="social_rating_avg" Type="float" Nullable="false" />
+          <Property Name="atmosphere_rating_avg" Type="float" Nullable="false" />
+          <Property Name="companies_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanySize">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="descryption" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Posts">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="companies_id" Type="int" Nullable="false" />
+          <Property Name="users_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="descryption" Type="nvarchar" Nullable="false" MaxLength="2000" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="date_creation" Type="date" Nullable="false" />
+          <Property Name="date_last_view" Type="date" Nullable="false" />
+          <Property Name="boss_rating" Type="float" Nullable="false" />
+          <Property Name="atmosphere_rating" Type="float" Nullable="false" />
+          <Property Name="social_rating" Type="float" Nullable="false" />
+          <Property Name="salary_rating" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="UsersDetails">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="users_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="first_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="last_name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="image_url" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.Version' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Version">
+          <Key>
+            <PropertyRef Name="version_number" />
+            <PropertyRef Name="subversion_number" />
+          </Key>
+          <Property Name="version_number" Type="smallint" Nullable="false" />
+          <Property Name="subversion_number" Type="smallint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.CompaniesView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CompaniesView">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="boss_rating_avg" Type="float" />
+          <Property Name="salary_rating_avg" Type="float" />
+          <Property Name="social_rating_avg" Type="float" />
+          <Property Name="atmosphere_rating_avg" Type="float" />
+          <Property Name="descryption" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.PostsView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="PostsView">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="companies_id" />
+            <PropertyRef Name="users_id" />
+            <PropertyRef Name="descryption" />
+            <PropertyRef Name="title" />
+            <PropertyRef Name="date_creation" />
+            <PropertyRef Name="date_last_view" />
+            <PropertyRef Name="boss_rating" />
+            <PropertyRef Name="atmosphere_rating" />
+            <PropertyRef Name="social_rating" />
+            <PropertyRef Name="salary_rating" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="companies_id" Type="int" Nullable="false" />
+          <Property Name="users_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="descryption" Type="nvarchar" Nullable="false" MaxLength="2000" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="date_creation" Type="date" Nullable="false" />
+          <Property Name="date_last_view" Type="date" Nullable="false" />
+          <Property Name="boss_rating" Type="float" Nullable="false" />
+          <Property Name="atmosphere_rating" Type="float" Nullable="false" />
+          <Property Name="social_rating" Type="float" Nullable="false" />
+          <Property Name="salary_rating" Type="float" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastActivityDate" Type="datetime" />
+          <Property Name="mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="number_of_posts" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="first_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="last_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="image_url" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.vw_aspnet_Applications' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_aspnet_Applications">
+          <Key>
+            <PropertyRef Name="ApplicationName" />
+            <PropertyRef Name="LoweredApplicationName" />
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="ApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.vw_aspnet_MembershipUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_aspnet_MembershipUsers">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="PasswordFormat" />
+            <PropertyRef Name="IsApproved" />
+            <PropertyRef Name="IsLockedOut" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="LastLoginDate" />
+            <PropertyRef Name="LastPasswordChangedDate" />
+            <PropertyRef Name="LastLockoutDate" />
+            <PropertyRef Name="FailedPasswordAttemptCount" />
+            <PropertyRef Name="FailedPasswordAttemptWindowStart" />
+            <PropertyRef Name="FailedPasswordAnswerAttemptCount" />
+            <PropertyRef Name="FailedPasswordAnswerAttemptWindowStart" />
+            <PropertyRef Name="ApplicationId" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="IsAnonymous" />
+            <PropertyRef Name="LastActivityDate" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PasswordFormat" Type="int" Nullable="false" />
+          <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+          <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+          <Property Name="IsApproved" Type="bit" Nullable="false" />
+          <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+          <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+          <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+          <Property Name="Comment" Type="ntext" />
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+          <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+          <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.vw_aspnet_Profiles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_aspnet_Profiles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="LastUpdatedDate" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+          <Property Name="DataSize" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.vw_aspnet_Roles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_aspnet_Roles">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="RoleName" />
+            <PropertyRef Name="LoweredRoleName" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredRoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.vw_aspnet_Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_aspnet_Users">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="LoweredUserName" />
+            <PropertyRef Name="IsAnonymous" />
+            <PropertyRef Name="LastActivityDate" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredUserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+          <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+          <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.vw_aspnet_UsersInRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_aspnet_UsersInRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.vw_aspnet_WebPartState_Paths' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_aspnet_WebPartState_Paths">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+            <PropertyRef Name="PathId" />
+            <PropertyRef Name="Path" />
+            <PropertyRef Name="LoweredPath" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredPath" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.vw_aspnet_WebPartState_Shared' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_aspnet_WebPartState_Shared">
+          <Key>
+            <PropertyRef Name="PathId" />
+            <PropertyRef Name="LastUpdatedDate" />
+          </Key>
+          <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DataSize" Type="int" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'G:\MEETYOURBOSS\MEETYOURBOSS\APP_DATA\MEETYOURBOSS.MDF.dbo.vw_aspnet_WebPartState_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_aspnet_WebPartState_User">
+          <Key>
+            <PropertyRef Name="LastUpdatedDate" />
+          </Key>
+          <Property Name="PathId" Type="uniqueidentifier" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="DataSize" Type="int" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__aspnet_Me__Appli__60A75C0F">
+          <End Role="aspnet_Applications" Type="MeetYourBossModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Membership" Type="MeetYourBossModel.Store.aspnet_Membership" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Me__UserI__619B8048">
+          <End Role="aspnet_Users" Type="MeetYourBossModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_Membership" Type="MeetYourBossModel.Store.aspnet_Membership" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pa__Appli__19DFD96B">
+          <End Role="aspnet_Applications" Type="MeetYourBossModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Paths" Type="MeetYourBossModel.Store.aspnet_Paths" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Paths">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__2180FB33">
+          <End Role="aspnet_Paths" Type="MeetYourBossModel.Store.aspnet_Paths" Multiplicity="1" />
+          <End Role="aspnet_PersonalizationAllUsers" Type="MeetYourBossModel.Store.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationAllUsers">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__2739D489">
+          <End Role="aspnet_Paths" Type="MeetYourBossModel.Store.aspnet_Paths" Multiplicity="0..1" />
+          <End Role="aspnet_PersonalizationPerUser" Type="MeetYourBossModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__UserI__282DF8C2">
+          <End Role="aspnet_Users" Type="MeetYourBossModel.Store.aspnet_Users" Multiplicity="0..1" />
+          <End Role="aspnet_PersonalizationPerUser" Type="MeetYourBossModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pr__UserI__778AC167">
+          <End Role="aspnet_Users" Type="MeetYourBossModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_Profile" Type="MeetYourBossModel.Store.aspnet_Profile" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Profile">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Ro__Appli__02FC7413">
+          <End Role="aspnet_Applications" Type="MeetYourBossModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Roles" Type="MeetYourBossModel.Store.aspnet_Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Roles">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__Appli__4CA06362">
+          <End Role="aspnet_Applications" Type="MeetYourBossModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Users" Type="MeetYourBossModel.Store.aspnet_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Users">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__RoleI__09A971A2">
+          <End Role="aspnet_Roles" Type="MeetYourBossModel.Store.aspnet_Roles" Multiplicity="1" />
+          <End Role="aspnet_UsersInRoles" Type="MeetYourBossModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="aspnet_UsersInRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__UserI__08B54D69">
+          <End Role="aspnet_Users" Type="MeetYourBossModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_UsersInRoles" Type="MeetYourBossModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_UsersInRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Companies_CompanySize">
+          <End Role="CompanySize" Type="MeetYourBossModel.Store.CompanySize" Multiplicity="1" />
+          <End Role="Companies" Type="MeetYourBossModel.Store.Companies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanySize">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Companies">
+              <PropertyRef Name="companysize_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyRating_Companies">
+          <End Role="Companies" Type="MeetYourBossModel.Store.Companies" Multiplicity="1" />
+          <End Role="CompanyRating" Type="MeetYourBossModel.Store.CompanyRating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CompanyRating">
+              <PropertyRef Name="companies_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Posts_aspnet_Users">
+          <End Role="aspnet_Users" Type="MeetYourBossModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="Posts" Type="MeetYourBossModel.Store.Posts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Posts">
+              <PropertyRef Name="users_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Posts_Companies">
+          <End Role="Companies" Type="MeetYourBossModel.Store.Companies" Multiplicity="1" />
+          <End Role="Posts" Type="MeetYourBossModel.Store.Posts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Posts">
+              <PropertyRef Name="companies_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersDetails_aspnetUsers">
+          <End Role="aspnet_Users" Type="MeetYourBossModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="UsersDetails" Type="MeetYourBossModel.Store.UsersDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UsersDetails">
+              <PropertyRef Name="users_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MeetYourBossModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="MeetYourBossEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="aspnet_Applications" EntityType="MeetYourBossModel.aspnet_Applications" />
+          <EntitySet Name="aspnet_Membership" EntityType="MeetYourBossModel.aspnet_Membership" />
+          <EntitySet Name="aspnet_Paths" EntityType="MeetYourBossModel.aspnet_Paths" />
+          <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="MeetYourBossModel.aspnet_PersonalizationAllUsers" />
+          <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="MeetYourBossModel.aspnet_PersonalizationPerUser" />
+          <EntitySet Name="aspnet_Profile" EntityType="MeetYourBossModel.aspnet_Profile" />
+          <EntitySet Name="aspnet_Roles" EntityType="MeetYourBossModel.aspnet_Roles" />
+          <EntitySet Name="aspnet_SchemaVersions" EntityType="MeetYourBossModel.aspnet_SchemaVersions" />
+          <EntitySet Name="aspnet_Users" EntityType="MeetYourBossModel.aspnet_Users" />
+          <EntitySet Name="aspnet_WebEvent_Events" EntityType="MeetYourBossModel.aspnet_WebEvent_Events" />
+          <EntitySet Name="Companies" EntityType="MeetYourBossModel.Company" />
+          <EntitySet Name="CompanyRatings" EntityType="MeetYourBossModel.CompanyRating" />
+          <EntitySet Name="CompanySizes" EntityType="MeetYourBossModel.CompanySize" />
+          <EntitySet Name="Posts" EntityType="MeetYourBossModel.Post" />
+          <EntitySet Name="sysdiagrams" EntityType="MeetYourBossModel.sysdiagram" />
+          <EntitySet Name="UsersDetails" EntityType="MeetYourBossModel.UsersDetail" />
+          <EntitySet Name="Versions" EntityType="MeetYourBossModel.Version" />
+          <EntitySet Name="CompaniesViews" EntityType="MeetYourBossModel.CompaniesView" />
+          <EntitySet Name="PostsViews" EntityType="MeetYourBossModel.PostsView" />
+          <EntitySet Name="vw_aspnet_Applications" EntityType="MeetYourBossModel.vw_aspnet_Applications" />
+          <EntitySet Name="vw_aspnet_MembershipUsers" EntityType="MeetYourBossModel.vw_aspnet_MembershipUsers" />
+          <EntitySet Name="vw_aspnet_Profiles" EntityType="MeetYourBossModel.vw_aspnet_Profiles" />
+          <EntitySet Name="vw_aspnet_Roles" EntityType="MeetYourBossModel.vw_aspnet_Roles" />
+          <EntitySet Name="vw_aspnet_Users" EntityType="MeetYourBossModel.vw_aspnet_Users" />
+          <EntitySet Name="vw_aspnet_UsersInRoles" EntityType="MeetYourBossModel.vw_aspnet_UsersInRoles" />
+          <EntitySet Name="vw_aspnet_WebPartState_Paths" EntityType="MeetYourBossModel.vw_aspnet_WebPartState_Paths" />
+          <EntitySet Name="vw_aspnet_WebPartState_Shared" EntityType="MeetYourBossModel.vw_aspnet_WebPartState_Shared" />
+          <EntitySet Name="vw_aspnet_WebPartState_User" EntityType="MeetYourBossModel.vw_aspnet_WebPartState_User" />
+          <AssociationSet Name="FK__aspnet_Me__Appli__60A75C0F" Association="MeetYourBossModel.FK__aspnet_Me__Appli__60A75C0F">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pa__Appli__19DFD96B" Association="MeetYourBossModel.FK__aspnet_Pa__Appli__19DFD96B">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Ro__Appli__02FC7413" Association="MeetYourBossModel.FK__aspnet_Ro__Appli__02FC7413">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__Appli__4CA06362" Association="MeetYourBossModel.FK__aspnet_Us__Appli__4CA06362">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Me__UserI__619B8048" Association="MeetYourBossModel.FK__aspnet_Me__UserI__619B8048">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__2180FB33" Association="MeetYourBossModel.FK__aspnet_Pe__PathI__2180FB33">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__2739D489" Association="MeetYourBossModel.FK__aspnet_Pe__PathI__2739D489">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__UserI__282DF8C2" Association="MeetYourBossModel.FK__aspnet_Pe__UserI__282DF8C2">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pr__UserI__778AC167" Association="MeetYourBossModel.FK__aspnet_Pr__UserI__778AC167">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Posts_aspnet_Users" Association="MeetYourBossModel.FK_Posts_aspnet_Users">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="Posts" EntitySet="Posts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersDetails_aspnetUsers" Association="MeetYourBossModel.FK_UsersDetails_aspnetUsers">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="UsersDetails" EntitySet="UsersDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Companies_CompanySize" Association="MeetYourBossModel.FK_Companies_CompanySize">
+            <End Role="CompanySize" EntitySet="CompanySizes" />
+            <End Role="Companies" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyRating_Companies" Association="MeetYourBossModel.FK_CompanyRating_Companies">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="CompanyRating" EntitySet="CompanyRatings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Posts_Companies" Association="MeetYourBossModel.FK_Posts_Companies">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="Posts" EntitySet="Posts" />
+          </AssociationSet>
+          <AssociationSet Name="aspnet_UsersInRoles" Association="MeetYourBossModel.aspnet_UsersInRoles">
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="aspnet_Applications">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="aspnet_Membership" Relationship="MeetYourBossModel.FK__aspnet_Me__Appli__60A75C0F" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="MeetYourBossModel.FK__aspnet_Pa__Appli__19DFD96B" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+          <NavigationProperty Name="aspnet_Roles" Relationship="MeetYourBossModel.FK__aspnet_Ro__Appli__02FC7413" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+          <NavigationProperty Name="aspnet_Users" Relationship="MeetYourBossModel.FK__aspnet_Us__Appli__4CA06362" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+          <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+          <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="MeetYourBossModel.FK__aspnet_Me__Appli__60A75C0F" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Users" Relationship="MeetYourBossModel.FK__aspnet_Me__UserI__619B8048" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Paths">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="PathId" Type="Guid" Nullable="false" />
+          <Property Name="Path" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="MeetYourBossModel.FK__aspnet_Pa__Appli__19DFD96B" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="MeetYourBossModel.FK__aspnet_Pe__PathI__2180FB33" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="MeetYourBossModel.FK__aspnet_Pe__PathI__2739D489" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationAllUsers">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="PathId" Type="Guid" Nullable="false" />
+          <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="MeetYourBossModel.FK__aspnet_Pe__PathI__2180FB33" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationPerUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="PathId" Type="Guid" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="MeetYourBossModel.FK__aspnet_Pe__PathI__2739D489" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+          <NavigationProperty Name="aspnet_Users" Relationship="MeetYourBossModel.FK__aspnet_Pe__UserI__282DF8C2" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Profile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="PropertyNames" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="PropertyValuesString" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="PropertyValuesBinary" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="aspnet_Users" Relationship="MeetYourBossModel.FK__aspnet_Pr__UserI__778AC167" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="RoleId" Type="Guid" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="MeetYourBossModel.FK__aspnet_Ro__Appli__02FC7413" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Users" Relationship="MeetYourBossModel.aspnet_UsersInRoles" FromRole="aspnet_Roles" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_SchemaVersions">
+          <Key>
+            <PropertyRef Name="Feature" />
+            <PropertyRef Name="CompatibleSchemaVersion" />
+          </Key>
+          <Property Name="Feature" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="CompatibleSchemaVersion" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="IsCurrentVersion" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+          <Property Name="mail" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="number_of_posts" Type="Int32" Nullable="false" />
+          <Property Name="number_of_entrances" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="MeetYourBossModel.FK__aspnet_Us__Appli__4CA06362" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Membership" Relationship="MeetYourBossModel.FK__aspnet_Me__UserI__619B8048" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="MeetYourBossModel.FK__aspnet_Pe__UserI__282DF8C2" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
+          <NavigationProperty Name="aspnet_Profile" Relationship="MeetYourBossModel.FK__aspnet_Pr__UserI__778AC167" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
+          <NavigationProperty Name="Posts" Relationship="MeetYourBossModel.FK_Posts_aspnet_Users" FromRole="aspnet_Users" ToRole="Posts" />
+          <NavigationProperty Name="UsersDetails" Relationship="MeetYourBossModel.FK_UsersDetails_aspnetUsers" FromRole="aspnet_Users" ToRole="UsersDetails" />
+          <NavigationProperty Name="aspnet_Roles" Relationship="MeetYourBossModel.aspnet_UsersInRoles" FromRole="aspnet_Users" ToRole="aspnet_Roles" />
+        </EntityType>
+        <EntityType Name="aspnet_WebEvent_Events">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="true" />
+          <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" />
+          <Property Name="EventTime" Type="DateTime" Nullable="false" />
+          <Property Name="EventType" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="EventSequence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+          <Property Name="EventOccurrence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+          <Property Name="EventCode" Type="Int32" Nullable="false" />
+          <Property Name="EventDetailCode" Type="Int32" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="ApplicationPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="ApplicationVirtualPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="MachineName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="RequestUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="ExceptionType" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Details" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="companysize_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CompanySize" Relationship="MeetYourBossModel.FK_Companies_CompanySize" FromRole="Companies" ToRole="CompanySize" />
+          <NavigationProperty Name="CompanyRatings" Relationship="MeetYourBossModel.FK_CompanyRating_Companies" FromRole="Companies" ToRole="CompanyRating" />
+          <NavigationProperty Name="Posts" Relationship="MeetYourBossModel.FK_Posts_Companies" FromRole="Companies" ToRole="Posts" />
+        </EntityType>
+        <EntityType Name="CompanyRating">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="boss_rating_avg" Type="Double" Nullable="false" />
+          <Property Name="salary_rating_avg" Type="Double" Nullable="false" />
+          <Property Name="social_rating_avg" Type="Double" Nullable="false" />
+          <Property Name="atmosphere_rating_avg" Type="Double" Nullable="false" />
+          <Property Name="companies_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Company" Relationship="MeetYourBossModel.FK_CompanyRating_Companies" FromRole="CompanyRating" ToRole="Companies" />
+        </EntityType>
+        <EntityType Name="CompanySize">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="descryption" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Companies" Relationship="MeetYourBossModel.FK_Companies_CompanySize" FromRole="CompanySize" ToRole="Companies" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="companies_id" Type="Int32" Nullable="false" />
+          <Property Name="users_id" Type="Guid" Nullable="false" />
+          <Property Name="descryption" Type="String" Nullable="false" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="date_creation" Type="DateTime" Nullable="false" />
+          <Property Name="date_last_view" Type="DateTime" Nullable="false" />
+          <Property Name="boss_rating" Type="Double" Nullable="false" />
+          <Property Name="atmosphere_rating" Type="Double" Nullable="false" />
+          <Property Name="social_rating" Type="Double" Nullable="false" />
+          <Property Name="salary_rating" Type="Double" Nullable="false" />
+          <NavigationProperty Name="aspnet_Users" Relationship="MeetYourBossModel.FK_Posts_aspnet_Users" FromRole="Posts" ToRole="aspnet_Users" />
+          <NavigationProperty Name="Company" Relationship="MeetYourBossModel.FK_Posts_Companies" FromRole="Posts" ToRole="Companies" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UsersDetail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="users_id" Type="Guid" Nullable="false" />
+          <Property Name="first_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="last_name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="image_url" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="aspnet_Users" Relationship="MeetYourBossModel.FK_UsersDetails_aspnetUsers" FromRole="UsersDetails" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="Version">
+          <Key>
+            <PropertyRef Name="version_number" />
+            <PropertyRef Name="subversion_number" />
+          </Key>
+          <Property Name="version_number" Type="Int16" Nullable="false" />
+          <Property Name="subversion_number" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompaniesView">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="boss_rating_avg" Type="Double" />
+          <Property Name="salary_rating_avg" Type="Double" />
+          <Property Name="social_rating_avg" Type="Double" />
+          <Property Name="atmosphere_rating_avg" Type="Double" />
+          <Property Name="descryption" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="PostsView">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="companies_id" />
+            <PropertyRef Name="users_id" />
+            <PropertyRef Name="descryption" />
+            <PropertyRef Name="title" />
+            <PropertyRef Name="date_creation" />
+            <PropertyRef Name="date_last_view" />
+            <PropertyRef Name="boss_rating" />
+            <PropertyRef Name="atmosphere_rating" />
+            <PropertyRef Name="social_rating" />
+            <PropertyRef Name="salary_rating" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="companies_id" Type="Int32" Nullable="false" />
+          <Property Name="users_id" Type="Guid" Nullable="false" />
+          <Property Name="descryption" Type="String" Nullable="false" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="date_creation" Type="DateTime" Nullable="false" />
+          <Property Name="date_last_view" Type="DateTime" Nullable="false" />
+          <Property Name="boss_rating" Type="Double" Nullable="false" />
+          <Property Name="atmosphere_rating" Type="Double" Nullable="false" />
+          <Property Name="social_rating" Type="Double" Nullable="false" />
+          <Property Name="salary_rating" Type="Double" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LastActivityDate" Type="DateTime" />
+          <Property Name="mail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="number_of_posts" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="first_name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="last_name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="image_url" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="vw_aspnet_Applications">
+          <Key>
+            <PropertyRef Name="ApplicationName" />
+            <PropertyRef Name="LoweredApplicationName" />
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="vw_aspnet_MembershipUsers">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="PasswordFormat" />
+            <PropertyRef Name="IsApproved" />
+            <PropertyRef Name="IsLockedOut" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="LastLoginDate" />
+            <PropertyRef Name="LastPasswordChangedDate" />
+            <PropertyRef Name="LastLockoutDate" />
+            <PropertyRef Name="FailedPasswordAttemptCount" />
+            <PropertyRef Name="FailedPasswordAttemptWindowStart" />
+            <PropertyRef Name="FailedPasswordAnswerAttemptCount" />
+            <PropertyRef Name="FailedPasswordAnswerAttemptWindowStart" />
+            <PropertyRef Name="ApplicationId" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="IsAnonymous" />
+            <PropertyRef Name="LastActivityDate" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+          <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+          <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_aspnet_Profiles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="LastUpdatedDate" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="DataSize" Type="Int32" />
+        </EntityType>
+        <EntityType Name="vw_aspnet_Roles">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="RoleName" />
+            <PropertyRef Name="LoweredRoleName" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="RoleId" Type="Guid" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="vw_aspnet_Users">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="LoweredUserName" />
+            <PropertyRef Name="IsAnonymous" />
+            <PropertyRef Name="LastActivityDate" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_aspnet_UsersInRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="RoleId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_aspnet_WebPartState_Paths">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+            <PropertyRef Name="PathId" />
+            <PropertyRef Name="Path" />
+            <PropertyRef Name="LoweredPath" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="PathId" Type="Guid" Nullable="false" />
+          <Property Name="Path" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="vw_aspnet_WebPartState_Shared">
+          <Key>
+            <PropertyRef Name="PathId" />
+            <PropertyRef Name="LastUpdatedDate" />
+          </Key>
+          <Property Name="PathId" Type="Guid" Nullable="false" />
+          <Property Name="DataSize" Type="Int32" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_aspnet_WebPartState_User">
+          <Key>
+            <PropertyRef Name="LastUpdatedDate" />
+          </Key>
+          <Property Name="PathId" Type="Guid" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="DataSize" Type="Int32" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__aspnet_Me__Appli__60A75C0F">
+          <End Role="aspnet_Applications" Type="MeetYourBossModel.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Membership" Type="MeetYourBossModel.aspnet_Membership" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pa__Appli__19DFD96B">
+          <End Role="aspnet_Applications" Type="MeetYourBossModel.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Paths" Type="MeetYourBossModel.aspnet_Paths" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Paths">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Ro__Appli__02FC7413">
+          <End Role="aspnet_Applications" Type="MeetYourBossModel.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Roles" Type="MeetYourBossModel.aspnet_Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Roles">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__Appli__4CA06362">
+          <End Role="aspnet_Applications" Type="MeetYourBossModel.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Users" Type="MeetYourBossModel.aspnet_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Users">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Me__UserI__619B8048">
+          <End Role="aspnet_Users" Type="MeetYourBossModel.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_Membership" Type="MeetYourBossModel.aspnet_Membership" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__2180FB33">
+          <End Role="aspnet_Paths" Type="MeetYourBossModel.aspnet_Paths" Multiplicity="1" />
+          <End Role="aspnet_PersonalizationAllUsers" Type="MeetYourBossModel.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationAllUsers">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__2739D489">
+          <End Role="aspnet_Paths" Type="MeetYourBossModel.aspnet_Paths" Multiplicity="0..1" />
+          <End Role="aspnet_PersonalizationPerUser" Type="MeetYourBossModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__UserI__282DF8C2">
+          <End Role="aspnet_Users" Type="MeetYourBossModel.aspnet_Users" Multiplicity="0..1" />
+          <End Role="aspnet_PersonalizationPerUser" Type="MeetYourBossModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pr__UserI__778AC167">
+          <End Role="aspnet_Users" Type="MeetYourBossModel.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_Profile" Type="MeetYourBossModel.aspnet_Profile" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Profile">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Posts_aspnet_Users">
+          <End Role="aspnet_Users" Type="MeetYourBossModel.aspnet_Users" Multiplicity="1" />
+          <End Role="Posts" Type="MeetYourBossModel.Post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Posts">
+              <PropertyRef Name="users_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersDetails_aspnetUsers">
+          <End Role="aspnet_Users" Type="MeetYourBossModel.aspnet_Users" Multiplicity="1" />
+          <End Role="UsersDetails" Type="MeetYourBossModel.UsersDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UsersDetails">
+              <PropertyRef Name="users_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Companies_CompanySize">
+          <End Role="CompanySize" Type="MeetYourBossModel.CompanySize" Multiplicity="1" />
+          <End Role="Companies" Type="MeetYourBossModel.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanySize">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Companies">
+              <PropertyRef Name="companysize_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyRating_Companies">
+          <End Role="Companies" Type="MeetYourBossModel.Company" Multiplicity="1" />
+          <End Role="CompanyRating" Type="MeetYourBossModel.CompanyRating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CompanyRating">
+              <PropertyRef Name="companies_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Posts_Companies">
+          <End Role="Companies" Type="MeetYourBossModel.Company" Multiplicity="1" />
+          <End Role="Posts" Type="MeetYourBossModel.Post" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Posts">
+              <PropertyRef Name="companies_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="aspnet_UsersInRoles">
+          <End Role="aspnet_Roles" Type="MeetYourBossModel.aspnet_Roles" Multiplicity="*" />
+          <End Role="aspnet_Users" Type="MeetYourBossModel.aspnet_Users" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MeetYourBossModelStoreContainer" CdmEntityContainer="MeetYourBossEntities">
+          <EntitySetMapping Name="aspnet_Applications"><EntityTypeMapping TypeName="MeetYourBossModel.aspnet_Applications"><MappingFragment StoreEntitySet="aspnet_Applications">
+            <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+            <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+            <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Membership"><EntityTypeMapping TypeName="MeetYourBossModel.aspnet_Membership"><MappingFragment StoreEntitySet="aspnet_Membership">
+            <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+            <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+            <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+            <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+            <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+            <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+            <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+            <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+            <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+            <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+            <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+            <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+            <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+            <ScalarProperty Name="Comment" ColumnName="Comment" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Paths"><EntityTypeMapping TypeName="MeetYourBossModel.aspnet_Paths"><MappingFragment StoreEntitySet="aspnet_Paths">
+            <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+            <ScalarProperty Name="PathId" ColumnName="PathId" />
+            <ScalarProperty Name="Path" ColumnName="Path" />
+            <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="aspnet_PersonalizationAllUsers"><EntityTypeMapping TypeName="MeetYourBossModel.aspnet_PersonalizationAllUsers"><MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+            <ScalarProperty Name="PathId" ColumnName="PathId" />
+            <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+            <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="aspnet_PersonalizationPerUser"><EntityTypeMapping TypeName="MeetYourBossModel.aspnet_PersonalizationPerUser"><MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="PathId" ColumnName="PathId" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+            <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Profile"><EntityTypeMapping TypeName="MeetYourBossModel.aspnet_Profile"><MappingFragment StoreEntitySet="aspnet_Profile">
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+            <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+            <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+            <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Roles"><EntityTypeMapping TypeName="MeetYourBossModel.aspnet_Roles"><MappingFragment StoreEntitySet="aspnet_Roles">
+            <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+            <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+            <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+            <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="aspnet_SchemaVersions"><EntityTypeMapping TypeName="MeetYourBossModel.aspnet_SchemaVersions"><MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+            <ScalarProperty Name="Feature" ColumnName="Feature" />
+            <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+            <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Users"><EntityTypeMapping TypeName="MeetYourBossModel.aspnet_Users"><MappingFragment StoreEntitySet="aspnet_Users">
+            <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="UserName" ColumnName="UserName" />
+            <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+            <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+            <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+            <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+            <ScalarProperty Name="mail" ColumnName="mail" />
+            <ScalarProperty Name="number_of_posts" ColumnName="number_of_posts" />
+            <ScalarProperty Name="number_of_entrances" ColumnName="number_of_entrances" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="aspnet_WebEvent_Events"><EntityTypeMapping TypeName="MeetYourBossModel.aspnet_WebEvent_Events"><MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+            <ScalarProperty Name="EventId" ColumnName="EventId" />
+            <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+            <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+            <ScalarProperty Name="EventType" ColumnName="EventType" />
+            <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+            <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+            <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+            <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+            <ScalarProperty Name="Message" ColumnName="Message" />
+            <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+            <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+            <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+            <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+            <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+            <ScalarProperty Name="Details" ColumnName="Details" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Companies"><EntityTypeMapping TypeName="MeetYourBossModel.Company"><MappingFragment StoreEntitySet="Companies">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="companysize_id" ColumnName="companysize_id" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CompanyRatings"><EntityTypeMapping TypeName="MeetYourBossModel.CompanyRating"><MappingFragment StoreEntitySet="CompanyRating">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="boss_rating_avg" ColumnName="boss_rating_avg" />
+            <ScalarProperty Name="salary_rating_avg" ColumnName="salary_rating_avg" />
+            <ScalarProperty Name="social_rating_avg" ColumnName="social_rating_avg" />
+            <ScalarProperty Name="atmosphere_rating_avg" ColumnName="atmosphere_rating_avg" />
+            <ScalarProperty Name="companies_id" ColumnName="companies_id" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CompanySizes"><EntityTypeMapping TypeName="MeetYourBossModel.CompanySize"><MappingFragment StoreEntitySet="CompanySize">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="descryption" ColumnName="descryption" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Posts"><EntityTypeMapping TypeName="MeetYourBossModel.Post"><MappingFragment StoreEntitySet="Posts">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="companies_id" ColumnName="companies_id" />
+            <ScalarProperty Name="users_id" ColumnName="users_id" />
+            <ScalarProperty Name="descryption" ColumnName="descryption" />
+            <ScalarProperty Name="title" ColumnName="title" />
+            <ScalarProperty Name="date_creation" ColumnName="date_creation" />
+            <ScalarProperty Name="date_last_view" ColumnName="date_last_view" />
+            <ScalarProperty Name="boss_rating" ColumnName="boss_rating" />
+            <ScalarProperty Name="atmosphere_rating" ColumnName="atmosphere_rating" />
+            <ScalarProperty Name="social_rating" ColumnName="social_rating" />
+            <ScalarProperty Name="salary_rating" ColumnName="salary_rating" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams"><EntityTypeMapping TypeName="MeetYourBossModel.sysdiagram"><MappingFragment StoreEntitySet="sysdiagrams">
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+            <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+            <ScalarProperty Name="version" ColumnName="version" />
+            <ScalarProperty Name="definition" ColumnName="definition" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UsersDetails"><EntityTypeMapping TypeName="MeetYourBossModel.UsersDetail"><MappingFragment StoreEntitySet="UsersDetails">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="users_id" ColumnName="users_id" />
+            <ScalarProperty Name="first_name" ColumnName="first_name" />
+            <ScalarProperty Name="last_name" ColumnName="last_name" />
+            <ScalarProperty Name="image_url" ColumnName="image_url" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Versions"><EntityTypeMapping TypeName="MeetYourBossModel.Version"><MappingFragment StoreEntitySet="Version">
+            <ScalarProperty Name="version_number" ColumnName="version_number" />
+            <ScalarProperty Name="subversion_number" ColumnName="subversion_number" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CompaniesViews"><EntityTypeMapping TypeName="MeetYourBossModel.CompaniesView"><MappingFragment StoreEntitySet="CompaniesView">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="boss_rating_avg" ColumnName="boss_rating_avg" />
+            <ScalarProperty Name="salary_rating_avg" ColumnName="salary_rating_avg" />
+            <ScalarProperty Name="social_rating_avg" ColumnName="social_rating_avg" />
+            <ScalarProperty Name="atmosphere_rating_avg" ColumnName="atmosphere_rating_avg" />
+            <ScalarProperty Name="descryption" ColumnName="descryption" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PostsViews"><EntityTypeMapping TypeName="MeetYourBossModel.PostsView"><MappingFragment StoreEntitySet="PostsView">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="companies_id" ColumnName="companies_id" />
+            <ScalarProperty Name="users_id" ColumnName="users_id" />
+            <ScalarProperty Name="descryption" ColumnName="descryption" />
+            <ScalarProperty Name="title" ColumnName="title" />
+            <ScalarProperty Name="date_creation" ColumnName="date_creation" />
+            <ScalarProperty Name="date_last_view" ColumnName="date_last_view" />
+            <ScalarProperty Name="boss_rating" ColumnName="boss_rating" />
+            <ScalarProperty Name="atmosphere_rating" ColumnName="atmosphere_rating" />
+            <ScalarProperty Name="social_rating" ColumnName="social_rating" />
+            <ScalarProperty Name="salary_rating" ColumnName="salary_rating" />
+            <ScalarProperty Name="UserName" ColumnName="UserName" />
+            <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+            <ScalarProperty Name="mail" ColumnName="mail" />
+            <ScalarProperty Name="number_of_posts" ColumnName="number_of_posts" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="first_name" ColumnName="first_name" />
+            <ScalarProperty Name="last_name" ColumnName="last_name" />
+            <ScalarProperty Name="image_url" ColumnName="image_url" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vw_aspnet_Applications"><EntityTypeMapping TypeName="MeetYourBossModel.vw_aspnet_Applications"><MappingFragment StoreEntitySet="vw_aspnet_Applications">
+            <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+            <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+            <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vw_aspnet_MembershipUsers"><EntityTypeMapping TypeName="MeetYourBossModel.vw_aspnet_MembershipUsers"><MappingFragment StoreEntitySet="vw_aspnet_MembershipUsers">
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+            <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+            <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+            <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+            <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+            <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+            <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+            <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+            <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+            <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+            <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+            <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+            <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+            <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+            <ScalarProperty Name="Comment" ColumnName="Comment" />
+            <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+            <ScalarProperty Name="UserName" ColumnName="UserName" />
+            <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+            <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+            <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vw_aspnet_Profiles"><EntityTypeMapping TypeName="MeetYourBossModel.vw_aspnet_Profiles"><MappingFragment StoreEntitySet="vw_aspnet_Profiles">
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+            <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vw_aspnet_Roles"><EntityTypeMapping TypeName="MeetYourBossModel.vw_aspnet_Roles"><MappingFragment StoreEntitySet="vw_aspnet_Roles">
+            <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+            <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+            <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+            <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vw_aspnet_Users"><EntityTypeMapping TypeName="MeetYourBossModel.vw_aspnet_Users"><MappingFragment StoreEntitySet="vw_aspnet_Users">
+            <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="UserName" ColumnName="UserName" />
+            <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+            <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+            <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+            <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vw_aspnet_UsersInRoles"><EntityTypeMapping TypeName="MeetYourBossModel.vw_aspnet_UsersInRoles"><MappingFragment StoreEntitySet="vw_aspnet_UsersInRoles">
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vw_aspnet_WebPartState_Paths"><EntityTypeMapping TypeName="MeetYourBossModel.vw_aspnet_WebPartState_Paths"><MappingFragment StoreEntitySet="vw_aspnet_WebPartState_Paths">
+            <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+            <ScalarProperty Name="PathId" ColumnName="PathId" />
+            <ScalarProperty Name="Path" ColumnName="Path" />
+            <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vw_aspnet_WebPartState_Shared"><EntityTypeMapping TypeName="MeetYourBossModel.vw_aspnet_WebPartState_Shared"><MappingFragment StoreEntitySet="vw_aspnet_WebPartState_Shared">
+            <ScalarProperty Name="PathId" ColumnName="PathId" />
+            <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+            <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="vw_aspnet_WebPartState_User"><EntityTypeMapping TypeName="MeetYourBossModel.vw_aspnet_WebPartState_User"><MappingFragment StoreEntitySet="vw_aspnet_WebPartState_User">
+            <ScalarProperty Name="PathId" ColumnName="PathId" />
+            <ScalarProperty Name="UserId" ColumnName="UserId" />
+            <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+            <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="aspnet_UsersInRoles" TypeName="MeetYourBossModel.aspnet_UsersInRoles" StoreEntitySet="aspnet_UsersInRoles">
+            <EndProperty Name="aspnet_Roles">
+              <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="aspnet_Users">
+              <ScalarProperty Name="UserId" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="myb">
+        <EntityTypeShape EntityType="MeetYourBossModel.aspnet_Applications" Width="1.5" PointX="0.75" PointY="10.125" Height="2.2496956380208317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.aspnet_Membership" Width="1.5" PointX="3" PointY="8" Height="4.7149055989583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.aspnet_Paths" Width="1.5" PointX="3" PointY="14.25" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.aspnet_PersonalizationAllUsers" Width="1.5" PointX="5.25" PointY="14.5" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.aspnet_PersonalizationPerUser" Width="1.5" PointX="5.25" PointY="11.25" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.aspnet_Profile" Width="1.5" PointX="10.5" PointY="12.375" Height="1.9210009765624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.aspnet_Roles" Width="1.5" PointX="3" PointY="17.125" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.aspnet_SchemaVersions" Width="1.5" PointX="0.75" PointY="0.75" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.aspnet_Users" Width="1.5" PointX="8.25" PointY="12.875" Height="3.7288216145833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.aspnet_WebEvent_Events" Width="1.5" PointX="2.75" PointY="0.75" Height="3.4001269531250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.Company" Width="1.5" PointX="11.25" PointY="8.75" Height="1.9210009765625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.CompanyRating" Width="1.5" PointX="13.5" PointY="8.625" Height="2.0853483072916745" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.CompanySize" Width="1.5" PointX="9" PointY="9" Height="1.4279589843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.Post" Width="1.5" PointX="13.5" PointY="13.125" Height="3.0714322916666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.sysdiagram" Width="1.5" PointX="4.75" PointY="0.75" Height="1.7566536458333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.UsersDetail" Width="1.5" PointX="10.5" PointY="18.875" Height="1.9210009765625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.Version" Width="1.5" PointX="4.75" PointY="3.75" Height="1.2636116536458388" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.CompaniesView" Width="1.5" PointX="6.75" PointY="0.75" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.PostsView" Width="1.5" PointX="6.75" PointY="3.75" Height="4.0575162760416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.vw_aspnet_Applications" Width="1.5" PointX="8.75" PointY="0.75" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.vw_aspnet_MembershipUsers" Width="1.5" PointX="10.75" PointY="0.75" Height="4.7149055989583282" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.vw_aspnet_Profiles" Width="1.5" PointX="0.75" PointY="5.75" Height="1.4279589843750067" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.vw_aspnet_Roles" Width="1.5" PointX="5.75" PointY="8.75" Height="1.7566536458333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.vw_aspnet_Users" Width="1.5" PointX="12.75" PointY="0.75" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.vw_aspnet_UsersInRoles" Width="1.5" PointX="12.75" PointY="3.75" Height="1.2636116536458246" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.vw_aspnet_WebPartState_Paths" Width="1.5" PointX="14.75" PointY="0.75" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.vw_aspnet_WebPartState_Shared" Width="1.5" PointX="14.75" PointY="3.75" Height="1.4279589843750102" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetYourBossModel.vw_aspnet_WebPartState_User" Width="1.5" PointX="15.75" PointY="6.75" Height="1.5923063151041674" IsExpanded="true" />
+        <AssociationConnector Association="MeetYourBossModel.FK__aspnet_Me__Appli__60A75C0F" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.249847819010416" />
+          <ConnectorPoint PointX="3" PointY="11.249847819010416" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK__aspnet_Pa__Appli__19DFD96B" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="12.374695638020832" />
+          <ConnectorPoint PointX="1.5" PointY="15.292674153645834" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="15.292674153645834" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="15.292674153645834" />
+          <ConnectorPoint PointX="3" PointY="15.292674153645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK__aspnet_Ro__Appli__02FC7413" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="12.374695638020832" />
+          <ConnectorPoint PointX="1.9062525" PointY="18.167674153645834" />
+          <ConnectorPoint PointX="3" PointY="18.167674153645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK__aspnet_Us__Appli__4CA06362" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.0937475" PointY="12.374695638020832" />
+          <ConnectorPoint PointX="1.0937475" PointY="13.792674153645834" />
+          <ConnectorPoint PointX="1.4166666666666667" PointY="13.792674153645834" />
+          <ConnectorPoint PointX="1.5833333333333333" PointY="13.792674153645834" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="13.792674153645834" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="13.792674153645834" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="13.792674153645834" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="13.792674153645834" />
+          <ConnectorPoint PointX="8.25" PointY="13.792674153645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK__aspnet_Me__UserI__619B8048" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.59375" PointY="12.875" />
+          <ConnectorPoint PointX="8.59375" PointY="8.34375" />
+          <ConnectorPoint PointX="4.5" PointY="8.34375" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK__aspnet_Pe__PathI__2180FB33" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="15.296153157552084" />
+          <ConnectorPoint PointX="5.25" PointY="15.296153157552084" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK__aspnet_Pe__PathI__2739D489" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="14.251152846153847" />
+          <ConnectorPoint PointX="4.875" PointY="13.876152846153847" />
+          <ConnectorPoint PointX="4.875" PointY="12.292674153645834" />
+          <ConnectorPoint PointX="5.25" PointY="12.292674153645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK__aspnet_Pe__UserI__282DF8C2" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="13.105174153645834" />
+          <ConnectorPoint PointX="6.75" PointY="13.105174153645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK__aspnet_Pr__UserI__778AC167" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="13.58550048828125" />
+          <ConnectorPoint PointX="10.5" PointY="13.58550048828125" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK_Posts_aspnet_Users" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="15.277466634114584" />
+          <ConnectorPoint PointX="13.5" PointY="15.277466634114584" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK_UsersDetails_aspnetUsers" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="16.603821614583332" />
+          <ConnectorPoint PointX="9" PointY="19.835500488281252" />
+          <ConnectorPoint PointX="10.5" PointY="19.835500488281252" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK_Companies_CompanySize" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.5" PointY="9.7139794921875016" />
+          <ConnectorPoint PointX="11.25" PointY="9.7139794921875016" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK_CompanyRating_Companies" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.75" PointY="9.7105004882812516" />
+          <ConnectorPoint PointX="13.5" PointY="9.7105004882812516" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.FK_Posts_Companies" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.40625" PointY="10.671000976562503" />
+          <ConnectorPoint PointX="12.40625" PointY="14.786731305338549" />
+          <ConnectorPoint PointX="13.5" PointY="14.786731305338549" />
+        </AssociationConnector>
+        <AssociationConnector Association="MeetYourBossModel.aspnet_UsersInRoles" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="18.167674153645834" />
+          <ConnectorPoint PointX="8.5937475" PointY="18.167674153645834" />
+          <ConnectorPoint PointX="8.5937475" PointY="16.603821614583332" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
