@@ -13,14 +13,14 @@
     double rating = (item.boss_rating + item.atmosphere_rating + item.salary_rating + item.social_rating) / 4;
     
     <div class="post">
-        <h2>@item.UserName o firmie: @Html.ActionLink(@item.name, "FindCompany", new { id = item.companies_id }) </h2>
-     
-		<h2 class="title"> @item.title (@rating) </h2>
-		<p class="date">   @date_only</p>
-            <div class="entry">
-		    <p>@Html.DisplayFor(modelItem => item.descryption)</p>
-            <p> @Html.ActionLink("Więcej", "Details",new {id=item.id})</p>
-	        </div>
+
+        <h2 class="title" >@Html.ActionLink(@item.name, "FindCompany", new { id = item.companies_id }) @item.title (@rating) </h2>
+ 
+		<p class="date">@date_only</p>
+        <div class="entry">
+		    <p><textarea class="area" rows="5" cols="55" disabled="disabled">@Html.DisplayFor(modelItem => item.descryption)</textarea></p>
+            <p> @Html.ActionLink("Więcej", "Details",new {id=item.id}) </p>
+	    </div>
 
 	</div>
 }
