@@ -19,14 +19,17 @@ h1, h2, h3
     margin: 0;
     font-family: Georgia, "Times New Roman" , Times, serif;
     font-weight: normal;
-    color: #000000;
+    color: #FFFFFF;
 }
 
-h1 { font-size: 44px; }
+h1
+{
+    font-size: 52px;
+}
 
 h2
 {
-    font-size: 26px;
+    font-size: 36px;
 }
 
 h3 { }
@@ -234,10 +237,8 @@ hr { display: none; }
 
 /* Post */
 
-.post
-{
-    border-style: double;
-    margin-bottom: 25px;
+.post {
+	margin-bottom: 25px;
 }
 
 .post .title {
@@ -391,4 +392,9 @@ hr { display: none; }
 
 #footer a {
 	color: #B5ADA5;
+}
+
+.area
+{
+    font-size: 15px;
 }
