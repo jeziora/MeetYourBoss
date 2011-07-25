@@ -14,16 +14,13 @@
     
     <div class="post">
         
-     
-		<h2 class="title">
-        <p>@item.UserName o firmie: @Html.ActionLink(@item.name, "FindCompany", new { id = item.companies_id }) </p>
-         @item.title (@rating) 
-         </h2>
+        <h2 class="title" >@Html.ActionLink(@item.name, "FindCompany", new { id = item.companies_id }) @item.title (@rating) </h2>
+ 
 		<p class="date">@date_only</p>
-            <div class="entry">
-		    <p>@Html.DisplayFor(modelItem => item.descryption)</p>
-            <p> @Html.ActionLink("Więcej", "Details",new {id=item.id})</p>
-	        </div>
+        <div class="entry">
+		    <p><textarea class="area" rows="5" cols="55" disabled="disabled">@Html.DisplayFor(modelItem => item.descryption)</textarea></p>
+            <p> @Html.ActionLink("Więcej", "Details",new {id=item.id}) </p>
+	    </div>
 
 	</div>
 }
@@ -33,5 +30,5 @@
 </p>
 
 <p>
-    @Html.ActionLink("Wszystkie", "Index", "Posts")
+    @Html.ActionLink(" Zobacz wszystkie", "Index", "Posts")
 </p>
