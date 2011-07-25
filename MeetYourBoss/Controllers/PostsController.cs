@@ -15,7 +15,7 @@ namespace MeetYourBoss.Controllers
 
         //
         // GET: /Posts/
-
+        
         public ViewResult IndexMain()
         {
             var posts = db.PostsViews.OrderByDescending(i=>i.date_creation).Take(3);
@@ -25,7 +25,7 @@ namespace MeetYourBoss.Controllers
 
         public ViewResult Index()
         {
-            var posts = db.PostsViews;
+            var posts = db.PostsViews.OrderByDescending(i=>i.date_creation);
 
             return View(posts.ToList());
         }
@@ -46,7 +46,7 @@ namespace MeetYourBoss.Controllers
 
         //
         // GET: /Posts/Create
-
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.users_id = new SelectList(db.aspnet_Users, "UserId", "UserName");
@@ -56,7 +56,7 @@ namespace MeetYourBoss.Controllers
 
         //
         // POST: /Posts/Create
-
+        [Authorize]
         [HttpPost]
         public ActionResult Create(Post posts)
         {
